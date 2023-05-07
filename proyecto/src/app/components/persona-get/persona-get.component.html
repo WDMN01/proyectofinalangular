@@ -1,0 +1,20 @@
+<a routerLink="agregar" class="btn btn-primary mb-1 mt 1">Agregar</a>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let persona of personas">
+            <td>{{persona.Nombre}}</td>
+            <td>{{persona.Apellido}}</td>
+            <td class="text-right">
+                <a routerLink="editar/{{persona.id}}" class="btn btn-primary">Editar</a>
+                <button (click)="borrar(persona.id)" class="btn btn-danger ml-1">Borrar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

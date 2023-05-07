@@ -1,0 +1,11 @@
+<form [formGroup]="mainFormGroup">
+    <div class="form-group">
+        <label for="txtNombre">Nombre</label>
+        <input type="text" id="txtNombre" class="form-control" formControlName="Nombre"/>
+    </div>
+    <div class="form-group">
+        <label for="txtNombre">Apellidp</label>
+        <input type="text" id="txtApellido" class="form-control" formControlName="Apellido"/>
+    </div>
+    <button class="btn btn-primary btn-block" (click)="submitForm()">Aceptar</button>
+</form>
