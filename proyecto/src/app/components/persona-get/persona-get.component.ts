@@ -21,7 +21,11 @@ export class PersonaGetComponent {
     });
   }
   borrar(id:number){
-    console.log("Borrando el "+id);
+    this.personaservice.delete(id).subscribe((resp)=>{
+      this.personaservice.getAll().subscribe((data:Persona[])=>{
+        this.personas = data;
+      });
+    })
   }
 
 }

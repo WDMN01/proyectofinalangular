@@ -22,4 +22,12 @@ export class PersonaService {
   get(id:number):Observable<Persona>{
     return this.httpClient.get<Persona>(this.url+"/"+id);
   }
+
+  add(persona:Persona){
+    return this.httpClient.post(this.url, persona);
+  }
+
+  delete(id:number){
+    return this.httpClient.delete(this.url + "/" + id);
+  }
 }

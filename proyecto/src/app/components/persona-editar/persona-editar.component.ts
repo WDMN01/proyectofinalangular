@@ -6,7 +6,7 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
   selector: 'app-persona-editar',
-  templateUrl: './persona-editar.component.html',
+  templateUrl: '../../shared/persona-form.component.html',
   styleUrls: ['./persona-editar.component.css']
 })
 export class PersonaEditarComponent implements OnInit {
