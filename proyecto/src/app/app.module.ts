@@ -12,6 +12,8 @@ import { PrincipalComponent } from './components/principal/principal.component';
 import { HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PersonaService } from './servicios/persona.service';
+import { MaterialModule } from './modulos/material/material.module';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,15 @@ import { PersonaService } from './servicios/persona.service';
     PersonaEditarComponent,
     ToolbarComponent,
     NavbarComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule
   ],
   providers: [PersonaService],
   bootstrap: [AppComponent]
