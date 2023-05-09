@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PersonaAgregarComponent } from './components/persona-agregar/persona-agregar.component';
 import { PersonaGetComponent } from './components/persona-get/persona-get.component';
 import { PersonaEditarComponent } from './components/persona-editar/persona-editar.component';
-import { LoginComponent } from './components/login/login.component';
+
 
 const routes: Routes = [
   {
@@ -18,10 +18,7 @@ const routes: Routes = [
     path: 'persona',
     component: PersonaGetComponent
   },
-  {
-    path: 'login',
-    component: LoginComponent
-  }
+  { path: 'login', loadChildren: () => import('./modulos/login/login.module').then(m => m.LoginModule) }
 ];
 
 @NgModule({

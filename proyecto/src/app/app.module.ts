@@ -14,7 +14,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PersonaService } from './servicios/persona.service';
 import { MaterialModule } from './modulos/material/material.module';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginModule } from './modulos/login/login.module';
+
+
 
 @NgModule({
   declarations: [
@@ -26,14 +28,15 @@ import { LoginComponent } from './components/login/login.component';
     NavbarComponent,
     PrincipalComponent,
     CarruselComponent,
-    LoginComponent
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule, 
+    LoginModule
   ],
   providers: [PersonaService],
   bootstrap: [AppComponent]
