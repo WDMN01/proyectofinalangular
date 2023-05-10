@@ -15,6 +15,7 @@ import { PersonaService } from './servicios/persona.service';
 import { MaterialModule } from './modulos/material/material.module';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { LoginModule } from './modulos/login/login.module';
+import { CursosComponent } from './components/cursos/cursos.component';
 
 
 
@@ -28,6 +29,7 @@ import { LoginModule } from './modulos/login/login.module';
     NavbarComponent,
     PrincipalComponent,
     CarruselComponent,
+    CursosComponent,
   
   ],
   imports: [

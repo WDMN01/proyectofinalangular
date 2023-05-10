@@ -27,12 +27,18 @@
         </a>
       </div>
 </div>
+<div *ngIf="router.url == '/cursos'">
+  <app-cursos></app-cursos>
+</div>
 <div *ngIf="router.url == '/login'">
   <app-login ></app-login>
 </div>
-<app-login *ngIf="!visualizarMenu()" ></app-login>
 
-<router-outlet *ngIf="visualizarMenu()"></router-outlet>
+
+
+<app-login *ngIf="!visualizarMenu() && router.url != '/cursos' && router.url != '/' && router.url != '/login'" ></app-login>
+
+<router-outlet *ngIf="visualizarMenu() "></router-outlet>
 
 
 
