@@ -4,15 +4,22 @@
       <mat-card-title>Iniciar sesión</mat-card-title>
     </mat-card-header>
   
-    <form>
+    <form [formGroup]="myForm" (ngSubmit)="submitFormulario()">
       <mat-form-field>
-        <input matInput placeholder="Nombre de usuario" required>
+        <input formControlName="usuario" [class.is-invalid]="f.usuario.errors && f.usuario.touched" matInput placeholder="Nombre de usuario" required id="validationServerUsername">
+        <div id="validationServerUsername" class="invalid-feedback">
+          Usuario Obligatorio
+        </div>
       </mat-form-field>
   
       <mat-form-field>
-        <input matInput type="password" placeholder="Contraseña" required>
+        <input formControlName="password" [class.is-invalid]="f.password.errors && f.password.touched" matInput type="password" placeholder="Contraseña" required>
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Contraseña Obligatoria
+        </div>
       </mat-form-field>
   
       <button mat-raised-button color="primary" type="submit">Iniciar sesión</button>
     </form>
 </mat-card>
+
