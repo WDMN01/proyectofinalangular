@@ -34,9 +34,8 @@
   <app-login ></app-login>
 </div>
 
-
-
-<app-login *ngIf="!visualizarMenu() && router.url != '/cursos' && router.url != '/' && router.url != '/login'" ></app-login>
+<app-login *ngIf="!visualizarMenu() && router.url != '/cursos' && router.url != '/' && router.url != '/login'  && router.url != '/users'" ></app-login>
+<app-users-page *ngIf="router.url == '/users'"></app-users-page>
 
 <router-outlet *ngIf="visualizarMenu() "></router-outlet>
 

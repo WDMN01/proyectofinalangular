@@ -5,6 +5,7 @@ import { PersonaGetComponent } from './components/persona-get/persona-get.compon
 import { PersonaEditarComponent } from './components/persona-editar/persona-editar.component';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
+import { UsersPageComponent } from './modulos/users/pages/users-page/users-page.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,10 @@ const routes: Routes = [
   {
     path: 'cursos', component: CursosComponent, canActivate: [AuthGuardGuard]
   },
-  { path: 'login', loadChildren: () => import('./modulos/login/login.module').then(m => m.LoginModule) }
+  { path: 'login', loadChildren: () => import('./modulos/login/login.module').then(m => m.LoginModule) },
+  {
+    path: 'users', component: UsersPageComponent
+  }
 ];
 
 @NgModule({
